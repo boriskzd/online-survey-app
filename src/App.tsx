@@ -1,4 +1,4 @@
-import { Counter } from './features/counter/Counter';
+// import { Counter } from './features/counter/Counter';
 
 import SuccessPage from './views/SuccesPage';
 import SurveyPage from './views/SurveyPage';
@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import { Container } from '@mui/material';
 
 function App() {
+  console.log('[App.js] Render');
   return (
     <div>
       <Navbar />
@@ -14,9 +15,18 @@ function App() {
         <Routes>
           <Route path='/' element={<SurveyPage />} />
           <Route path='success' element={<SuccessPage />} />
+          <Route
+            path='*'
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>404</p>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
         </Routes>
 
-        <Counter />
+        {/* <Counter /> */}
       </Container>
     </div>
   );

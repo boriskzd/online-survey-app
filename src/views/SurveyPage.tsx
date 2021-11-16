@@ -1,3 +1,13 @@
+import { Typography } from '@mui/material';
+import SurveyForm from '../components/SurveyForm';
+
 export default function SurveyPage() {
-  return <div>Survey</div>;
+  return (
+    <>
+      <Typography variant='h4' component='h1'>
+        Survey page
+      </Typography>
+      <SurveyForm />
+    </>
+  );
 }
