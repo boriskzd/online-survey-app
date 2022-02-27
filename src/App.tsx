@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Container maxWidth='sm'>
+      <Container maxWidth='sm' sx={{ paddingTop: 2 }}>
         <Routes>
           <Route path='/' element={<SurveyPage />} />
           <Route path='success' element={<SuccessPage />} />
